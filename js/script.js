@@ -1,9 +1,21 @@
 "use strict"
 
-// пример с continue, когда итерация возвращается в начало не дойдя до конца:
-for (let i = 0; i < 10; i++) {
-    // если true, пропустить оставшуюся часть тела цикла
-    if (i % 2 == 0) continue;
-    alert(i); // выведет 1, затем 3, 5, 7, 9
-  }
-  // Для чётных значений i, директива continue прекращает выполнение тела цикла и передаёт управление на следующую итерацию for (со следующим числом). Таким образом alert вызывается только для нечётных значений.
+const month = +prompt('сколько фильмов посмотрели в последнее время?','');
+
+const moviesDB = {
+    count: month,
+    actors: {}
+};
+
+for (let i = 0; i < month; i++) {
+    const property = prompt('какой актер играл в главной роли?',''),
+          value = +prompt('насколько оцените его игру (1-10) ?','');
+    
+    if (property != null && value != null && property != '' && value != '' && property.length < 50) {
+        moviesDB.actors[property] = value;
+    } else {
+        i--;
+    }
+}
+
+console.log(moviesDB);
