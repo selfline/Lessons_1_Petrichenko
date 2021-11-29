@@ -9,7 +9,7 @@ function start() {
         month = +prompt('сколько фильмов посмотрели в последнее время?', '');
     }
 }
-start();
+// start();
 
 const moviesDB = {
     count: month,
@@ -21,7 +21,7 @@ const moviesDB = {
 function rememberFilms() {
     for (let i = 0; i < month; i++) {
         const property = prompt('какой актер играл в главной роли?', ''),
-            value = +prompt('насколько оцените его игру (1-10) ?', '');
+              value = +prompt('насколько оцените его игру (1-10) ?', '');
     
         if (property != null && value != null && property != '' && value != '' && property.length < 50) {
             moviesDB.actors[property] = value;
@@ -30,7 +30,7 @@ function rememberFilms() {
         }
     }
 }
-rememberFilms();
+// rememberFilms();
 
 // в hidden попадёт false, а потом поменяется на обратное значение в if и БД выведется, а при исходном true скроется
 function showDB (hidden) {
@@ -41,9 +41,11 @@ function showDB (hidden) {
 
 showDB(moviesDB.privat);
 
+// setTimeout(showDB, 4000, moviesDB.privat);
+
 function writeYourGenres () {
     for (let i = 1; i < 4; i++) {
         moviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
     }
 }
-writeYourGenres ();
+// writeYourGenres ();
