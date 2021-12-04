@@ -1,5 +1,3 @@
-"use strict";
-
 let month;
 
 function start() {
@@ -9,7 +7,7 @@ function start() {
         month = +prompt('сколько фильмов посмотрели в последнее время?', '');
     }
 }
-start();
+// start();
 
 const moviesDB = {
     count: month,
@@ -30,7 +28,7 @@ function rememberFilms() {
         }
     }
 }
-rememberFilms();
+// rememberFilms();
 
 // в hidden попадёт false, а потом поменяется на обратное значение в if и БД выведется, а при исходном true скроется
 function showDB (hidden) {
@@ -48,7 +46,7 @@ function writeYourGenres () {
         moviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
     }
 }
-writeYourGenres ();
+// writeYourGenres ();
 
 
 // встроенная функция задержки выполнения другой функции (и т.п.?)

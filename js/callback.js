@@ -1,6 +1,4 @@
-// export const callback = {
-
-    //ПРИМЕРЫ С КОЛЛБЭК:
+//ПРИМЕРЫ С КОЛЛБЭК:
 
 //пример1
 function learnJS(lang, callback) {
@@ -16,6 +14,3 @@ const arr = [2, 3, 6, 42, 13];
 arr.forEach(
     function(item, i , arr){console.log(`index: ${i} - value: ${item} in array ${arr}`);}
 );
-
-
-// }
