@@ -52,8 +52,6 @@ const moviesDB = {
     }
 };
 
-moviesDB.writeYourGenres();
-
 // console.log(moviesDB);
 
 // setTimeout(showDB, 4000, moviesDB.privat);

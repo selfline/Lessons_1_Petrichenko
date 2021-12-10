@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin: 200px auto 0;
     width: 100px;
     height: 100px;
     font-size: 30px; 
@@ -22,9 +22,10 @@
     height: 100px;
     border-radius: 50%;
     background: #F6C263;
+    animation: pulse 3s infinite;
   }
   .pulse-wrapper:hover .pulse {
-    animation: pulse 2s infinite;
+    animation: pulse 1s infinite;
   }
   
   @keyframes pulse {
